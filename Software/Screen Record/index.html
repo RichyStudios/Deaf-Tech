@@ -1,0 +1,62 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pro Screen & Webcam Recorder</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <button id="themeToggle" class="theme-toggle btn">
+          <i class="fas fa-sun light-icon"></i>
+          <i class="fas fa-moon dark-icon"></i>
+          <span class="theme-text">Toggle Theme</span>
+      </button>
+  
+      <div class="container">
+          <div class="header">
+    <h1>Screen Record</h1>
+</div>
+          <button id="pipButton" class="btn">
+              <i class="fas fa-external-link-alt"></i> Pop-out Webcam
+          </button>
+      
+          <div class="recording-panel">
+              <div class="preview-container">
+                  <video id="webcamPreview" autoplay muted></video>
+                  <video id="screenPreview" autoplay muted></video>
+              </div>
+          
+              <div class="controls">
+                
+                  <button id="startWebcam" class="btn"><i class="fas fa-camera"></i> Start Webcam</button>
+                  <button id="startScreen" class="btn"><i class="fas fa-desktop"></i> Start Screen</button>
+                  <button id="startRecording" class="btn primary"><i class="fas fa-record-vinyl"></i> Start Recording</button>
+                  <button id="stopRecording" class="btn danger" disabled><i class="fas fa-stop"></i> Stop Recording</button>
+              </div>
+              
+          <div class="recordings-list">
+              <h2>Recorded Videos</h2>
+              <div id="recordingsList"></div>
+          </div>
+      </div>
+      <script src="script.js"></script>
+
+      <!-- Add this after your main content but before closing body tag -->
+
+  </body>
+  </html>
+
+
+
+<div class="support-container">
+    <p class="support-text">If you support me, I will keep working on the apps and update them. Please do not let me stop working on it.</p>
+    <a href="https://buymeacoffee.com/richynoble" target="_blank" rel="noopener" class="bmc-button">
+        <div class="bmc-icon">
+            <i class="fas fa-mug-hot"></i>
+        </div>
+        <span class="bmc-text">Buy me a coffee</span>
+    </a>
+</div>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair Plans - Deaf Tech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Images/Logo.png" alt="Deaf Tech Logo" class="logo-image">
+                </div>
+                <span class="brand-name">Deaf Tech</span>
+            </div>
+            <div class="coffee-btn">
+              <a href="https://buymeacoffee.com/richynoble" target="_blank" rel="noopener">
+                  <div class="smoke">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+                  <i class="fas fa-coffee"></i>
+                  <span class="coffee-text">Buy me a coffee</span>
+              </a>
+          </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMenu()" title="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="mobileMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about us.html" class="nav-link">About Us</a>
+                <a href="Software.html" class="nav-link">Software</a>
+                <a href="repair-plans.html" class="nav-link">Repair Computer</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pricing-container">
+        <div class="pricing-card card-0">
+            <div class="price-header">
+                <h3>Basic Plan</h3>
+                <h2>$25</h2>
+                <h3>1 Hour</h3>
+            </div>
+            <div class="price-features">
+                <ul>
+                    <li>✓ Basic Diagnostics</li>
+                    <li>✓ Virus Removal</li>
+                    <li>✓ Software Updates</li>
+                    <li>✓ Basic Cleanup</li>
+                    <li>✓ Performance Check</li>
+                </ul>
+            </div>
+            <a href="https://book.squareup.com/appointments/weh91eol49zh4i/location/L1H8QVV6Z6S2P/services/QAUTXK6RUO3WW7ZOJMQ4XZFD" class="select-plan">Select Plan</a>
+        </div>
+
+        <div class="pricing-card card-1">
+            <div class="price-header">
+                <h3>Standard Plan</h3>
+                <h2>$50</h2>
+                <h3>2 Hours</h3>
+            </div>
+            <div class="price-features">
+                <ul>
+                    <li>✓ All Basic Features</li>
+                    <li>✓ Hardware Check</li>
+                    <li>✓ Driver Updates</li>
+                    <li>✓ Deep Cleanup</li>
+                    <li>✓ System Optimization</li>
+                    <li>✓ Basic Repairs</li>
+                </ul>
+            </div>
+            <a href="https://book.squareup.com/appointments/weh91eol49zh4i/location/L1H8QVV6Z6S2P/services/IDGNT3XKDIPRKALDMH43SEGY" class="select-plan">Select Plan</a>
+        </div>
+
+        <div class="pricing-card popular card-2">
+            <div class="popular-tag">Most Popular</div>
+            <div class="price-header">
+                <h3>Premium Plan</h3>
+                <h2>$75</h2>
+                <h3>3 Hours</h3>
+            </div>
+            <div class="price-features">
+                <ul>
+                    <li>✓ All Standard Features</li>
+                    <li>✓ Advanced Diagnostics</li>
+                    <li>✓ Data Recovery</li>
+                    <li>✓ System Restore</li>
+                    <li>✓ Advanced Repairs</li>
+                    <li>✓ Priority Support</li>
+                    <li>✓ Performance Tuning</li>
+                </ul>
+            </div>
+            <a href="https://book.squareup.com/appointments/weh91eol49zh4i/location/L1H8QVV6Z6S2P/services/7RCMEBMX7G5WRCVV42OBJM4Z" class="select-plan">Select Plan</a>
+        </div>
+
+        <div class="pricing-card card-3">
+            <div class="price-header">
+                <h3>Deep Plan</h3>
+                <h2>$100</h2>
+                <h3>4 Hours</h3>
+            </div>
+            <div class="price-features">
+                <ul>
+                    <li>✓ All Premium Features</li>
+                    <li>✓ Network Setup</li>
+                    <li>✓ Custom Solutions</li>
+                    <li>✓ Reinstall</li>
+                    <li>✓ Repair issues Boot</li>
+                    <li>✓ Deep, Deep Clean</li>
+                    <li>✓ Blue Screen</li>
+                    <li>✓ Freezing</li>
+                </ul>
+            </div>
+            <a href="https://book.squareup.com/appointments/weh91eol49zh4i/location/L1H8QVV6Z6S2P/services/7LMWUAT52LK4IA5CN6CAHLTW" class="select-plan">Select Plan</a>
+        </div>
+    </div>
+    <!-- Add this after your pricing cards -->
+<div class="contact-section">
+    <h2>Contact Us</h2>
+    <h3>Have a question or need assistance? Reach out to us!</h3>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <!-- Web3Forms Required Fields -->
+        <input type="hidden" name="access_key" value="88b28578-528b-403b-8198-eda775a772cf">
+        <input type="hidden" name="subject" value="Deaf Tech Contact Form Submission">
+        <input type="hidden" name="from_name" value="Tech Deaf">
+
+        <div class="form-group">
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="firstName">First Name</label>
+            <div class="line"></div>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="lastName">Last Name</label>
+            <div class="line"></div>
+        </div>
+
+        <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+            <div class="line"></div>
+        </div>
+
+        <div class="form-group">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Your Message</label>
+            <div class="line"></div>
+        </div>
+
+        <button type="submit" class="send-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </form>
+</div>
+<div id="loader" class="loader-wrapper">
+    <div class="loader-content">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="Images/Logo.png" alt="Deaf Tech Logo" class="logo-image">
+                <div class="logo-glow"></div>
+            </div>
+            <span class="brand-name">Deaf Tech</span>
+        </div>
+        <div class="loader-circle"></div>
+        <div class="loader-text">Loading Deaf Tech</div>
+    </div>
+</div>
+
+<!-- Add GSAP library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="loading.js"></script>
+
+<!-- Add before closing body tag -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-text">
+            <span class="copyright">© 2025 Deaf Tech</span>
+            <span class="separator">|</span>
+            <span class="creator">Made with <i class="fas fa-heart"></i> by Richard Noble</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
