@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Maker By Richy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="UI.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-toolbar">
+        <div class="file-controls">
+            <button id="openProject" title="Open Project"><i class="fas fa-folder-open"></i> Open Project</button>
+            <button id="saveProject" title="Save Project"><i class="fas fa-save"></i> Save Project</button>
+            <button id="exportAnimation" title="Export Animation">
+                <i class="fas fa-file-export"></i> Export
+                <div class="export-dropdown">
+                    <div data-format="gif">GIF</div>
+                    <div data-format="ogg">OGG Video</div>
+                    <div data-format="mp4">MP4 Video</div>
+                    <div class="fx-controls">
+                        <button id="fxButton" title="FX">
+                            <i class="fas fa-magic"></i> FX
+                            <div class="fx-dropdown">
+                                <div data-fx="fire"><i class="fas fa-fire"></i> Fire</div>
+                                <div data-fx="snow"><i class="fas fa-snowflake"></i> Snow</div>
+                                <div data-fx="leaves"><i class="fas fa-leaf"></i> Leaves</div>
+                                <div data-fx="spark"><i class="fas fa-star"></i> Sparkle</div>
+                                <div data-fx="fireworks"><i class="fas fa-rocket"></i> Fireworks</div>
+                                <div data-fx="rain"><i class="fas fa-cloud-rain"></i> Rain</div>
+                                <div data-fx="lightning"><i class="fas fa-bolt"></i> Lightning</div>
+                            </div>
+                            <button id="importFile" title="Import Media">
+                                <i class="fas fa-file-import"></i> Import Media
+                                <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.gif" title="Import File">
+                            </button>
+                        </button>
+                    </div>
+                </div>
+            </button>
+
+<div class="stroke-size-control">
+    <div class="size-icon small"><i class="fas fa-dot-circle"></i></div>
+    <div class="size-slider-container">
+        <input type="range" id="strokeSize" min="1" max="50" value="2" title="Stroke Size">
+        <div class="size-preview" id="sizePreview"></div>
+    </div>
+    <div class="size-icon large"><i class="fas fa-circle"></i></div>
+    <div class="size-value" id="strokeValue">2px</div>
+    <div class="opacity-control">
+        <i class="fas fa-layer-group"></i>
+        <input type="range" id="opacitySlider" min="0" max="100" value="100" title="Opacity">
+        <span id="opacityValue">100%</span>
+</div>
+<div class="shape-controls">
+    <button class="fill-toggle active" title="Fill Shapes">
+        <i class="fas fa-fill-drip"></i>
+    </button>
+    <button class="stroke-toggle" title="Stroke Only">
+        <i class="far fa-square"></i>
+    </button>
+</div>
+        <div class="export-controls">
+            <!-- Existing export controls -->
+        </div>
+    </div>
+    <div class="app-container">
+        <div class="toolbar">
+            <div class="tool active" data-tooltip="Move Tool" data-tool="move">
+                <i class="fas fa-arrows-alt"></i>
+            </div>
+            <div class="tool" data-tooltip="Color Picker" data-tool="color">
+                <input type="color" id="colorPicker" value="#000000" title="Color Picker">
+                <i class="fas fa-palette"></i>
+            </div>
+            <div class="tool-separator"></div>
+            <div class="tool" data-tooltip="Circle Tool" data-tool="circle">
+                <i class="far fa-circle"></i>
+            </div>
+            <div class="tool" data-tooltip="Triangle Tool" data-tool="triangle">
+                <i class="fas fa-play fa-rotate-270"></i>
+            </div>
+            <div class="tool" data-tooltip="Square Tool" data-tool="square">
+                <i class="far fa-square"></i>
+            </div>
+            <div class="tool" data-tooltip="Star Tool" data-tool="star">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="tool" data-tooltip="Line Tool" data-tool="line">
+                <i class="fas fa-minus"></i>
+            </div>
+            <div class="tool" data-tooltip="Semicircle Tool" data-tool="semicircle">
+                <i class="fas fa-adjust"></i>
+            </div>
+            <div class="tool" data-tooltip="Arrow Tool" data-tool="arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="tool" data-tooltip="Diamond Tool" data-tool="diamond">
+                <i class="fas fa-gem"></i>
+            </div>
+            <div class="tool" data-tooltip="Heart Tool" data-tool="heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="tool-separator"></div>
+            <div class="tool" data-tooltip="Text Tool" data-tool="text">
+                <i class="fas fa-font"></i>
+            </div>
+            <div class="tool" data-tooltip="Font Select" data-tool="font-select">
+                <i class="fas fa-text-height"></i>
+                <div class="text-controls">
+                    <select id="fontSelect" title="Font Select">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                    <input type="number" id="fontSizeInput" value="20" min="8" max="72" title="Font Size">
+                </div>
+            </div>
+            <div class="tool-separator"></div>
+            <div class="tool" data-tooltip="Pencil Tool" data-tool="pencil">
+                <i class="fas fa-pencil-alt"></i>
+            </div>
+            <div class="tool" data-tooltip="Brush Tool" data-tool="brush">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="tool" data-tooltip="Fill Tool" data-tool="fill">
+                <i class="fas fa-fill-drip"></i>
+            </div>
+            <div class="tool" data-tooltip="Eraser Tool" data-tool="eraser">
+                <i class="fas fa-eraser"></i>
+            </div>
+            <div class="tool-separator"></div>
+            <div class="tool" data-tooltip="Undo" data-tool="undo">
+                <i class="fas fa-undo"></i>
+            </div>
+            <div class="tool" data-tooltip="Redo" data-tool="redo">
+                <i class="fas fa-redo"></i>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="canvas-container">
+                <canvas id="mainCanvas"></canvas>
+            </div>
+                    <button id="addPage" class="frame-btn" title="Add Page">
+            <i class="fas fa-file-plus"></i>
+</button>
+<div class="frame-controls">
+            <button id="prevFrame" class="frame-btn" title="Previous Frame"><i class="fas fa-step-backward"></i></button>
+            <button id="nextFrame" class="frame-btn" title="Next Frame"><i class="fas fa-step-forward"></i></button>
+            <button id="duplicateFrame" class="frame-btn" title="Duplicate Frame"><i class="fas fa-clone"></i></button>
+            <button id="toggleOnion" class="frame-btn" title="Toggle Onion Skin">
+                <i class="fas fa-layer-group"></i>
+            </button>
+            <button id="addFrame" class="frame-btn" title="Add Frame"><i class="fas fa-plus"></i></button>
+            <button id="removeFrame" class="frame-btn" title="Remove Frame"><i class="fas fa-trash"></i></button>
+            <button id="playAnimation" class="frame-btn" title="Play Animation"><i class="fas fa-play"></i></button>
+            <button id="stopAnimation" class="frame-btn" title="Stop Animation"><i class="fas fa-stop"></i></button>
+            <input type="range" id="speedControl" min="1" max="24" value="12" title="Animation Speed">
+            <span>Speed: <span id="speedValue">12</span> FPS</span>
+</div>
+            <div id="framesContainer">
+                <!-- Frame previews will be populated here -->
+            </div>
+        </div>
+        <!-- Modern Layers Panel -->
+        <div class="layers-panel">
+            <div class="layers-header glass-effect">
+                <div class="header-title">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>Artboard Layers</span>
+                </div>
+                <div class="layer-search">
+                    <i class="fas fa-search"></i>
+                    <label for="layerSearch" class="sr-only">Search layers</label>
+                    <input type="text" id="layerSearch" placeholder="Search layers...">
+                </div>
+            </div>
+
+            <div id="layersList" class="layers-content">
+                <!-- Layers will be dynamically added here -->
+            </div>
+
+            <div class="layers-toolbar glass-effect">
+                <button class="tool-btn primary-btn" id="addLayer">
+                    <i class="fas fa-plus"></i>
+                    <span class="tooltip">New Layer</span>
+                </button>
+                <button class="tool-btn" id="groupLayers">
+                    <i class="fas fa-folder-plus"></i>
+                    <span class="tooltip">Group Layers</span>
+                </button>
+                <button class="tool-btn" id="mergeLayers">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                    <span class="tooltip">Merge Layers</span>
+                </button>
+                <button class="tool-btn danger-btn" id="removeLayer">
+                    <i class="fas fa-trash-alt"></i>
+                    <span class="tooltip">Delete Layer</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="LayerManager.js"></script>
+    <script src="canvas.js"></script>
+    <script src="appsystem.js"></script>
+    <script src="FameSystem.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
+    <script src="Exports.js"></script>
+    <script src="Toolbar.js"></script>
+    <script src="FX.js"></script>
+    <script src="save.js"></script>
+    <script src="app.js"></script>
+    <script src="effects.js"></script>
+    <script src="toolbarL.js"></script>
+    <script src="AnimationExporter.js"></script>
+    <script src="OnionSkin.js"></script>
+    <script src="movetool.js"></script>
+    <script src="PageManager.js"></script>
+</body>
+</body>
+</html>
+
+<script>
+    // Initialize drawing settings
+    const canvas = new Canvas();
+    
+    // Set up color picker
+    document.getElementById('colorPicker').addEventListener('change', (e) => {
+        canvas.setStrokeStyle(e.target.value);
+    });
+    
+    // Set up tools
+    document.querySelectorAll('.tool').forEach(tool => {
+        tool.addEventListener('click', (e) => {
+            document.querySelectorAll('.tool').forEach(t => t.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+        });
+    });
+</script>

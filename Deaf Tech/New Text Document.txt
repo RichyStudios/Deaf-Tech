@@ -1,0 +1,67 @@
+ <!-- Software Card 8 -->
+          <div class="software-card" style="--card-index: 7">
+              <div class="software-image">
+                  <img src="https://source.unsplash.com/random/800x600?backup" alt="Backup Solution">
+                  <span class="version-tag">v3.2.1</span>
+              </div>
+              <div class="software-content">
+                  <h2>Backup Master</h2>
+                  <div class="software-meta">
+                      <span><i class="far fa-calendar"></i> Updated: Jan 8, 2024</span>
+                      <span><i class="fas fa-code-branch"></i> Version 3.2.1</span>
+                  </div>
+                  <p class="software-description">
+                      Automated backup solutions with cloud integration.
+                  </p>
+                  <div class="author-info">
+                      <img src="path-to-richard-noble.jpg" alt="Richard Noble">
+                      <span>By Richard Noble</span>
+                  </div>
+                  <a href="#" class="download-btn">Download Now</a>
+              </div>
+          </div>
+
+          <!-- Software Card 9 -->
+          <div class="software-card" style="--card-index: 8">
+              <div class="software-image">
+                  <img src="https://source.unsplash.com/random/800x600?performance" alt="Performance Monitor">
+                  <span class="version-tag">v2.4.5</span>
+              </div>
+              <div class="software-content">
+                  <h2>Performance Monitor</h2>
+                  <div class="software-meta">
+                      <span><i class="far fa-calendar"></i> Updated: Jan 7, 2024</span>
+                      <span><i class="fas fa-code-branch"></i> Version 2.4.5</span>
+                  </div>
+                  <p class="software-description">
+                      Track and analyze system performance metrics in real-time.
+                  </p>
+                  <div class="author-info">
+                      <img src="path-to-richard-noble.jpg" alt="Richard Noble">
+                      <span>By Richard Noble</span>
+                  </div>
+                  <a href="#" class="download-btn">Download Now</a>
+              </div>
+          </div>
+
+          <!-- Software Card 10 -->
+          <div class="software-card" style="--card-index: 9">
+              <div class="software-image">
+                  <img src="https://source.unsplash.com/random/800x600?security" alt="Security Suite">
+                  <span class="version-tag">v5.0.0</span>
+              </div>
+              <div class="software-content">
+                  <h2>Security Suite Pro</h2>
+                  <div class="software-meta">
+                      <span><i class="far fa-calendar"></i> Updated: Jan 6, 2024</span>
+                      <span><i class="fas fa-code-branch"></i> Version 5.0.0</span>
+                  </div>
+                  <p class="software-description">
+                      Complete security solution with firewall and encryption tools.
+                  </p>
+                  <div class="author-info">
+                      <img src="path-to-richard-noble.jpg" alt="Richard Noble">
+                      <span>By Richard Noble</span>
+                  </div>
+                  <a href="#" class="download-btn">Download Now</a>
+              </div>

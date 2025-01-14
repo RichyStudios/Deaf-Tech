@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            background: transparent;
+            overflow: hidden;
+        }
+        #webcamContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        #webcamVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .effects-panel {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+            background: rgba(0,0,0,0.5);
+            padding: 5px;
+            border-radius: 20px;
+        }
+        .effect-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+        .drag-handle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            -webkit-app-region: drag;
+        }
+    </style>
+</head>
+<body>
+    <div id="webcamContainer">
+        <div class="drag-handle"></div>
+        <video id="webcamVideo" autoplay></video>
+        <div class="effects-panel">
+            <button class="effect-btn" data-effect="none">🔄</button>
+            <button class="effect-btn" data-effect="blur">🌫️</button>
+            <button class="effect-btn" data-effect="sepia">🌅</button>
+            <button class="effect-btn" data-effect="grayscale">⚫</button>
+        </div>
+    </div>
+    <script src="webcam.js"></script>
+</body>
+</html>
